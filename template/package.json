@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "pnpm run build:types && pnpm run build:js",
-    "build:types": "tsc --declaration --emitDeclarationOnly",
+    "build:types": "tsc --project tsconfig.build.json --declaration --emitDeclarationOnly",
     "build:js": "swc src --out-dir dist --strip-leading-paths",
     "lint": "biome check; status=$?; echo 'Use `pnpm run lint!` to apply the fixes.'; exit $status",
     "lint!": "biome check --write",
