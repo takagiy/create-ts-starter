@@ -70,7 +70,6 @@ class TemplateWriter {
     });
     for await (const template of templates) {
       const templateName = path.relative(this.templateDir, template);
-      const outputPath = path.join(this.outputDir, templateName);
       const rendered = await this.eta.renderAsync(templateName, {
         projectName: this.projectName,
         author: this.author,
@@ -79,6 +78,7 @@ class TemplateWriter {
         issueUrl: this.issueUrl(),
         homepageUrl: this.homepageUrl(),
       });
+      const outputPath = this.toOutputPath(templateName);
       this.writeFile(outputPath, rendered);
     }
   }
@@ -87,6 +87,12 @@ class TemplateWriter {
     const dir = path.dirname(outputPath);
     await mkdir(dir, { recursive: true });
     await writeFile(outputPath, content);
+  }
+
+  toOutputPath(templateName: string) {
+    const p = path.parse(templateName);
+    const filename = p.base.replace(/^_\./, ".");
+    return path.join(this.outputDir, p.dir, filename);
   }
 
   repositoryUrl() {

@@ -9,8 +9,7 @@
   },
   "files": [
     "dist/*",
-    "template/*",
-    "template/.*"
+    "template/*"
   ],
   "publishConfig": {
     "access": "public"
