@@ -4,7 +4,9 @@
     "enabled": true
   },
   "files": {
-    "ignore": ["template/**/*"]
+    "ignore": [
+      "template/**/*"
+    ]
   },
   "linter": {
     "enabled": true,
@@ -15,6 +17,11 @@
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
+  },
+  "json": {
+    "formatter": {
+      "enabled": false
+    }
   },
   "vcs": {
     "enabled": true,

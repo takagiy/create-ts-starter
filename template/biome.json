@@ -13,6 +13,11 @@
     "enabled": true,
     "indentStyle": "space"
   },
+  "json": {
+    "formatter": {
+      "enabled": false
+    }
+  },
   "vcs": {
     "enabled": true,
     "clientKind": "git",
