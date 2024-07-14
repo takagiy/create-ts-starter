@@ -1,6 +1,6 @@
 {
   "name": "@takagiy/create-ts-starter",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "TypeScript project template with modern toolchains",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
