@@ -7,10 +7,7 @@
   "bin": {
     "create-ts-starter": "dist/index.js"
   },
-  "files": [
-    "dist/*",
-    "template/*"
-  ],
+  "files": ["dist/*", "template/*"],
   "publishConfig": {
     "access": "public"
   },
@@ -29,10 +26,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/takagiy/create-ts-starter.git"
   },
-  "keywords": [
-    "typescript",
-    "template"
-  ],
+  "keywords": ["typescript", "template"],
   "author": "Yuki Takagi <takagiy.4dev@gmail.com> (https://github.com/takagiy)",
   "license": "MIT",
   "bugs": {
@@ -41,16 +35,9 @@
   "homepage": "https://github.com/takagiy/create-ts-starter#readme",
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
   "ava": {
-    "files": [
-      "tests/**/*.ts"
-    ],
-    "extensions": [
-      "ts"
-    ],
-    "nodeArguments": [
-      "-r",
-      "@swc-node/register"
-    ],
+    "files": ["tests/**/*.ts"],
+    "extensions": ["ts"],
+    "nodeArguments": ["-r", "@swc-node/register"],
     "environmentVariables": {
       "SWCRC": "true"
     }

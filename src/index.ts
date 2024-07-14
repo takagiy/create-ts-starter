@@ -1,10 +1,10 @@
-import { Eta } from "eta";
-import path from "node:path";
-import { Glob } from "glob";
-import { mkdir, writeFile } from "node:fs/promises";
-import { prompt } from "enquirer";
-import gitUrlParse, { type GitUrl } from "git-url-parse";
 import { execSync } from "node:child_process";
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { prompt } from "enquirer";
+import { Eta } from "eta";
+import gitUrlParse, { type GitUrl } from "git-url-parse";
+import { Glob } from "glob";
 
 class TemplateWriter {
   private readonly templateDir = path.join(__dirname, "..", "template");
